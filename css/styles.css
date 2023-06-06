@@ -1,0 +1,283 @@
+/* styles are in decreasing order of HTML document */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* general variables */
+  --border: 2px solid rgb(169, 56, 109);
+  --border2: 2px solid rgb(88, 88, 186);
+  --boxShadow: 0 0 5px rgb(250, 234, 230);
+  --boxShadow2: 0px 0px 50px rgba(150, 150, 150, 0.3);
+  --outline: 2px solid rgb(108, 224, 128);
+  --transition: all 0.3s linear;
+
+  /* variables for this project */
+  --Blue: hsla(246, 80%, 60%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Light-red: hsla(15, 100%, 70%, 0.5);
+  --Light-red2: hsla(348, 100%, 68%, 0.5);
+  --Lime-green: hsla(145, 58%, 55%, 0.5);
+  --Pale-Blue: hsl(236, 100%, 87%);
+  --Soft-blue: hsla(195, 74%, 62%, 0.5);
+  --Soft-orange: hsla(43, 84%, 65%, 0.5);
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Violet: hsla(264, 64%, 52%, 0.5);
+}
+
+body {
+  background-color: var(--Very-dark-blue);
+  display: grid;
+  font-family: "Rubik", "Open Sans", Arial, Helvetica, sans-serif;
+  height: 100vh;
+  margin: 0;
+  place-items: center;
+}
+
+.main {
+  padding: 20px;
+  position: relative;
+  transition: var(--transition);
+  width: 365px;
+}
+
+.header {
+  align-items: center;
+  background-color: var(--Blue);
+  border-radius: 15px;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.header img {
+  width: 70px;
+}
+
+.header h2 {
+  color: white;
+  font-weight: 300;
+}
+
+.header p {
+  color: var(--Pale-Blue);
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.time-frames {
+  background-color: var(--Dark-blue);
+  border-radius: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 50px 20px 20px;
+  position: relative;
+  top: -30px;
+}
+
+.time-frames a {
+  color: var(--Pale-Blue);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 300;
+  position: relative;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.time-frames a:hover,
+.time-frames .active {
+  color: white;
+  transition: var(--transition);
+}
+
+.activities {
+  border-radius: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.activity-img {
+  border-radius: 15px;
+  padding: 5px;
+  position: relative;
+  z-index: 11;
+}
+
+.overlay {
+  border-radius: 15px;
+  position: absolute;
+  inset: 0;
+}
+
+.activity-img img {
+  height: 70px;
+  left: 230px;
+  position: relative;
+  top: -15px;
+  width: 70px;
+}
+
+.time-spent {
+  background-color: var(--Dark-blue);
+  border-radius: 15px;
+  color: white;
+  margin-top: -50px;
+  padding: 20px;
+  position: relative;
+  z-index: 111;
+}
+
+.activity,
+.hours {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hours {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.hours h2 {
+  font-weight: 300;
+}
+
+.hours p {
+  color: var(--Pale-Blue);
+}
+
+/* overlays */
+.work .overlay {
+  background-color: var(--Light-red);
+}
+.play .overlay {
+  background-color: var(--Soft-blue);
+}
+.study .overlay {
+  background-color: var(--Light-red2);
+}
+.exercise .overlay {
+  background-color: var(--Lime-green);
+}
+.social .overlay {
+  background-color: var(--Violet);
+}
+.self-care .overlay {
+  background-color: var(--Soft-orange);
+}
+
+@media screen and (min-width: 700px) {
+  .main {
+    column-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    transition: var(--transition);
+    width: 1100px;
+  }
+
+  .profile {
+    grid-row: 1 / span 2;
+  }
+
+  .header {
+    align-items: start;
+    flex-direction: column;
+    padding-bottom: 4rem;
+  }
+
+  .header h2 {
+    font-size: 2.3rem;
+    line-height: 1.3;
+  }
+
+  .time-frames {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .time-frames a {
+    font-size: 16px;
+  }
+
+  .activities {
+    margin-bottom: 0;
+  }
+
+  .activity-img img {
+    left: 160px;
+  }
+
+  .activity p:last-of-type {
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 10px;
+  }
+
+  .hours {
+    align-items: start;
+    flex-direction: column;
+    font-size: 1.6rem;
+    gap: 10px;
+    letter-spacing: 0.03rem;
+  }
+
+  .hours p {
+    font-size: 14px;
+  }
+
+  .time-spent {
+    padding-left: 1.5rem;
+  }
+}
+
+/* my-profile styles */
+.my-profile {
+  background-color: hsl(228, 59%, 16%);
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.my-profile > a {
+  cursor: pointer;
+  color: hsl(51, 79%, 45%);
+  text-decoration: none;
+}
+
+.my-profile-icons a {
+  cursor: pointer;
+  color: var(--White);
+  display: inline-block;
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 500px) {
+  .my-profile {
+    font-size: 12px;
+  }
+
+  .my-profile-icons a:first-of-type,
+  .my-profile-icons a:last-of-type {
+    display: none;
+  }
+}

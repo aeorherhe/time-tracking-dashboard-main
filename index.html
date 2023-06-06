@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>Time tracking dashboard</title>
+  </head>
+  <body>
+    <main>
+      <div class="main">
+        <div class="profile">
+          <header class="header">
+            <img src="./images/image-jeremy.png" alt="" />
+            <div class="info">
+              <p>Report for</p>
+              <h2>Jeremy Robson</h2>
+            </div>
+          </header>
+          <div class="time-frames">
+            <a href="#" class="daily time-frame">Daily</a>
+            <a href="#" class="weekly time-frame">Weekly</a>
+            <a href="#" class="monthly time-frame">Monthly</a>
+          </div>
+        </div>
+        <div class="work activities">
+          <div class="activity-img">
+            <img src="./images/icon-work.svg" alt="" />
+            <div class="overlay"></div>
+          </div>
+          <div class="time-spent">
+            <div class="activity">
+              <p>Work</p>
+              <p>...</p>
+            </div>
+            <div class="hours">
+              <h2><span id="current">32</span>hrs</h2>
+              <p>
+                <span class="prev-time">Last Week</span> -
+                <span id="previous">36</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="play activities">
+          <div class="activity-img">
+            <img src="./images/icon-play.svg" alt="" />
+            <div class="overlay"></div>
+          </div>
+          <div class="time-spent">
+            <div class="activity">
+              <p>Play</p>
+              <p>...</p>
+            </div>
+            <div class="hours">
+              <h2><span id="current">10</span>hrs</h2>
+              <p>
+                <span class="prev-time">Last Week</span> -
+                <span id="previous">8</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="study activities">
+          <div class="activity-img">
+            <img src="./images/icon-study.svg" alt="" />
+            <div class="overlay"></div>
+          </div>
+          <div class="time-spent">
+            <div class="activity">
+              <p>Study</p>
+              <p>...</p>
+            </div>
+            <div class="hours">
+              <h2><span id="current">4</span>hrs</h2>
+              <p>
+                <span class="prev-time">Last Week</span> -
+                <span id="previous">7</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="exercise activities">
+          <div class="activity-img">
+            <img src="./images/icon-exercise.svg" alt="" />
+            <div class="overlay"></div>
+          </div>
+          <div class="time-spent">
+            <div class="activity">
+              <p>Exercise</p>
+              <p>...</p>
+            </div>
+            <div class="hours">
+              <h2><span id="current">4</span>hrs</h2>
+              <p>
+                <span class="prev-time">Last Week</span> -
+                <span id="previous">5</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="social activities">
+          <div class="activity-img">
+            <img src="./images/icon-social.svg" alt="" />
+            <div class="overlay"></div>
+          </div>
+          <div class="time-spent">
+            <div class="activity">
+              <p>Social</p>
+              <p>...</p>
+            </div>
+            <div class="hours">
+              <h2><span id="current">5</span>hrs</h2>
+              <p>
+                <span class="prev-time">Last Week</span> -
+                <span id="previous">10</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="self-care activities">
+          <div class="activity-img">
+            <img src="./images/icon-self-care.svg" alt="" />
+            <div class="overlay"></div>
+          </div>
+          <div class="time-spent">
+            <div class="activity">
+              <p>Self Care</p>
+              <p>...</p>
+            </div>
+            <div class="hours">
+              <h2><span id="current">5</span>hrs</h2>
+              <p>
+                <span class="prev-time">Last Week</span> -
+                <span id="previous">10</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <my-profile class="my-profile">
+      Challenge by :
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor....
+      </a>
+      Coded by :
+      <a href="https://aeorherhe.netlify.app" target="_blank"
+        >Abraham Orherhe</a
+      >
+      <div class="my-profile-icons">
+        <a href="https://www.facebook.com/aeorherhe" target="_blank"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a href="https://www.instagram.com/aeorherhe/" target="_blank"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="https://twitter.com/aeorherhe" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+    </my-profile>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>
